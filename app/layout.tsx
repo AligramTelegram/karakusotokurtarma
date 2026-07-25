@@ -67,6 +67,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   category: "Automotive",
+  verification: {
+    google: "mLw-ENXV4dpPp0xJScoJF5lS6n7WM2ahY5Wth00sDY0",
+  },
 };
 
 export const viewport: Viewport = {
