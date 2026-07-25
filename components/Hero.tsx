@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE, telUrl } from "@/lib/site";
 import { PhoneIcon, ClockIcon, MapPinIcon, ShieldIcon, ArrowRightIcon, ChevronDownIcon } from "./Icons";
 
@@ -11,11 +12,14 @@ const STATS = [
 export default function Hero() {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden">
-      {/* Arka plan görseli — gerçek foto public/hero.jpg olarak eklenecek */}
-      <div
-        className="absolute inset-0 bg-ink-light bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero.webp')" }}
-        aria-hidden
+      {/* Arka plan görseli — LCP için priority + responsive */}
+      <Image
+        src="/hero.webp"
+        alt="Karakuş Yol Yardım çekicisi — Çorum oto kurtarma"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
       />
       <div className="hero-overlay absolute inset-0" aria-hidden />
 
@@ -26,9 +30,9 @@ export default function Hero() {
             Çorum&apos;un 7/24 Yol Yardım Ekibi
           </p>
 
-          <h1 className="font-display text-5xl font-bold uppercase leading-[0.95] tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-white sm:text-6xl sm:leading-[0.95] lg:text-7xl">
             Yolda Kaldıysanız
-            <br />
+            <br className="hidden sm:block" />{" "}
             Bir Telefon <span className="text-brand">Yeter!</span>
           </h1>
 

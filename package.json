@@ -13,6 +13,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
+  "browserslist": [
+    "chrome >= 90",
+    "safari >= 14",
+    "firefox >= 90",
+    "edge >= 90",
+    "not dead"
+  ],
   "devDependencies": {
     "@types/node": "^20.14.0",
     "@types/react": "^18.3.3",
