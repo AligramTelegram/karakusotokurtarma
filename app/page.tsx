@@ -2,6 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/ServicesGrid";
 import FaqAccordion from "@/components/FaqAccordion";
+import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
 import { SectionHeading, CtaBand } from "@/components/ui";
 import {
@@ -57,9 +58,9 @@ export default function HomePage() {
             title="Çorum'da Aklınıza Gelen Her Kurtarma"
             desc="Şehir içinden şehirlerarasına, akü takviyeden ağır tonaj kurtarmaya kadar tek numarayla tüm yol yardım ihtiyaçlarınız."
           />
-          <div className="mt-12">
+          <Reveal className="mt-12">
             <ServicesGrid items={FEATURED_SERVICES} />
-          </div>
+          </Reveal>
           <div className="mt-8 text-center">
             <Link
               href="/hizmetler"
@@ -75,7 +76,7 @@ export default function HomePage() {
       {/* Yediemin Otoparkı */}
       <section id="yediemin" className="section scroll-mt-20 bg-slate-50">
         <div className="container-x">
-          <div className="grid items-center gap-10 lg:grid-cols-2">
+          <Reveal className="grid items-center gap-10 lg:grid-cols-2">
             <div>
               <SectionHeading
                 eyebrow="Yediemin İşletmeciliği"
@@ -113,14 +114,14 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       {/* Neden biz */}
       <section className="section">
         <div className="container-x">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+          <Reveal className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <SectionHeading
                 eyebrow="Neden Karakuş?"
@@ -144,7 +145,7 @@ export default function HomePage() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -156,7 +157,7 @@ export default function HomePage() {
             title="Çorum Merkez ve Tüm İlçeler"
             desc="Bulunduğunuz ilçeye özel çekici ve yol yardım hizmeti. İlçenizi seçin, size en yakın ekiple ulaşalım."
           />
-          <div className="mt-10 flex flex-wrap justify-center gap-3">
+          <Reveal className="mt-10 flex flex-wrap justify-center gap-3">
             <span className="inline-flex items-center gap-2 rounded-full bg-brand px-5 py-2.5 text-sm font-bold text-white">
               <MapPinIcon className="h-4 w-4" />
               Çorum Merkez
@@ -170,7 +171,7 @@ export default function HomePage() {
                 {d.name}
               </Link>
             ))}
-          </div>
+          </Reveal>
           <div className="mt-8 text-center">
             <Link
               href="/bolgeler"
@@ -191,7 +192,7 @@ export default function HomePage() {
             title="Çorumluların Güvendiği Ekip"
             desc="Zor anlarında bize güvenen müşterilerimizin deneyimleri."
           />
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <Reveal className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {REVIEWS.map((r) => (
               <figure key={r.name} className="card">
                 <div className="flex gap-0.5 text-brand">
@@ -210,7 +211,7 @@ export default function HomePage() {
                 </figcaption>
               </figure>
             ))}
-          </div>
+          </Reveal>
 
           {SITE.google.reviewUrl && (
             <div className="mt-10 text-center">
@@ -235,9 +236,9 @@ export default function HomePage() {
             eyebrow="Sıkça Sorulan Sorular"
             title="Merak Edilenler"
           />
-          <div className="mt-12">
+          <Reveal className="mt-12">
             <FaqAccordion items={FAQS} />
-          </div>
+          </Reveal>
         </div>
       </section>
 

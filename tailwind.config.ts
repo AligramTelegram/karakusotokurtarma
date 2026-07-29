@@ -40,10 +40,15 @@ const config: Config = {
           "70%": { boxShadow: "0 0 0 14px rgba(242,133,31,0)" },
           "100%": { boxShadow: "0 0 0 0 rgba(242,133,31,0)" },
         },
+        "ken-burns": {
+          "0%": { transform: "scale(1.12)" },
+          "100%": { transform: "scale(1)" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.6s ease-out both",
         "pulse-ring": "pulseRing 2s infinite",
+        "ken-burns": "ken-burns 12s ease-out both",
       },
     },
   },
