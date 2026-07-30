@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
+import JsonLd from "@/components/JsonLd";
 import { CtaBand } from "@/components/ui";
 import { ArrowRightIcon, ClockIcon } from "@/components/Icons";
 import { POSTS } from "@/lib/posts";
+import { SITE } from "@/lib/site";
+import { itemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Blog & Rehber | Çorum Oto Kurtarma",
@@ -23,6 +26,15 @@ export default function BlogPage() {
   const posts = [...POSTS].sort((a, b) => b.date.localeCompare(a.date));
   return (
     <>
+      <JsonLd
+        data={itemListSchema(
+          posts.map((p) => ({
+            name: p.title,
+            url: `${SITE.url}/blog/${p.slug}`,
+          })),
+          "Karakuş Yol Yardım Blog"
+        )}
+      />
       <PageHeader
         title="Blog & Rehber"
         desc="Çekici, oto kurtarma ve yol yardım hakkında bilmeniz gereken her şey — sürücüler için pratik rehberler."

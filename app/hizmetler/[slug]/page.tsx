@@ -3,11 +3,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import JsonLd from "@/components/JsonLd";
+import FaqAccordion from "@/components/FaqAccordion";
 import { CtaBand } from "@/components/ui";
 import { CheckIcon, PhoneIcon, ArrowRightIcon, ICONS } from "@/components/Icons";
 import { SERVICES, getService } from "@/lib/services";
 import { SITE, telUrl } from "@/lib/site";
-import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { serviceSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return SERVICES.map((s) => ({ slug: s.slug }));
@@ -55,6 +56,7 @@ export default function ServiceDetail({
           { name: service.title, url },
         ])}
       />
+      {service.faq.length > 0 && <JsonLd data={faqPageSchema(service.faq)} />}
 
       <PageHeader
         title={service.title}
@@ -97,6 +99,15 @@ export default function ServiceDetail({
                   </li>
                 ))}
               </ul>
+
+              {service.faq.length > 0 && (
+                <>
+                  <h3 className="mt-10 mb-6 font-display text-xl font-bold uppercase text-ink">
+                    {service.title} — Sıkça Sorulan Sorular
+                  </h3>
+                  <FaqAccordion items={service.faq} />
+                </>
+              )}
             </div>
 
             {/* Yan panel */}

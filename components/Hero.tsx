@@ -33,7 +33,7 @@ export default function Hero() {
           </p>
 
           <h1 className="animate-fade-up font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-white [animation-delay:100ms] sm:text-6xl sm:leading-[0.95] lg:text-7xl">
-            Yolda Kaldıysanız
+            Çorum&apos;da Yolda Kaldıysanız
             <br className="hidden sm:block" />{" "}
             Bir Telefon <span className="text-brand">Yeter!</span>
           </h1>

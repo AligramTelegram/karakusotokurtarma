@@ -31,6 +31,12 @@ export default function IletisimPage() {
 
       <section className="section">
         <div className="container-x">
+          <p className="mx-auto mb-10 max-w-3xl text-center text-slate-600">
+            Çorum merkez ya da ilçelerinden birinde olun, {SITE.name} 7/24
+            ulaşılabilir. Telefon veya WhatsApp ile bize yazın, konumunuzu
+            paylaşın; en yakın ekibimiz hemen yola çıksın. Aşağıda adresimizi,
+            çalışma saatlerimizi ve konumumuzu bulabilirsiniz.
+          </p>
           <div className="grid gap-10 lg:grid-cols-2">
             <div>
               <div className="space-y-4">

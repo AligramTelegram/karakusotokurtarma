@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
 import ServicesGrid from "@/components/ServicesGrid";
+import JsonLd from "@/components/JsonLd";
 import { CtaBand } from "@/components/ui";
 import { SITE } from "@/lib/site";
+import { SERVICES } from "@/lib/services";
+import { itemListSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Hizmetlerimiz | Çorum Oto Kurtarma",
@@ -14,6 +17,15 @@ export const metadata: Metadata = {
 export default function HizmetlerPage() {
   return (
     <>
+      <JsonLd
+        data={itemListSchema(
+          SERVICES.map((s) => ({
+            name: s.title,
+            url: `${SITE.url}/hizmetler/${s.slug}`,
+          })),
+          "Karakuş Yol Yardım Hizmetleri"
+        )}
+      />
       <PageHeader
         title="Hizmetlerimiz"
         desc="Çorum ve tüm ilçelerinde ihtiyaç duyabileceğiniz tüm oto kurtarma ve yol yardım hizmetleri tek çatı altında."

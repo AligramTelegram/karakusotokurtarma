@@ -9,7 +9,7 @@ import { CtaBand } from "@/components/ui";
 import { PhoneIcon, ClockIcon, ArrowRightIcon } from "@/components/Icons";
 import { POSTS, getPost } from "@/lib/posts";
 import { SITE, telUrl } from "@/lib/site";
-import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
 
 export function generateStaticParams() {
   return POSTS.map((p) => ({ slug: p.slug }));
@@ -69,17 +69,7 @@ export default function PostDetail({ params }: { params: { slug: string } }) {
         ])}
       />
       {post.faq && post.faq.length > 0 && (
-        <JsonLd
-          data={{
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: post.faq.map((f) => ({
-              "@type": "Question",
-              name: f.q,
-              acceptedAnswer: { "@type": "Answer", text: f.a },
-            })),
-          }}
-        />
+        <JsonLd data={faqPageSchema(post.faq)} />
       )}
 
       <PageHeader

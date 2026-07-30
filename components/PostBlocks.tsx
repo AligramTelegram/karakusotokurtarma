@@ -1,4 +1,27 @@
-import type { Block } from "@/lib/posts";
+import Link from "next/link";
+import type { Block, InlineLink } from "@/lib/posts";
+
+// Paragraf metnindeki eşleşen kelimeleri iç link'e çevirir (iç linkleme sinyali).
+function renderWithLinks(text: string, links?: InlineLink[]) {
+  if (!links || links.length === 0) return text;
+
+  const pattern = links.map((l) => l.text).join("|");
+  const parts = text.split(new RegExp(`(${pattern})`, "g"));
+
+  return parts.map((part, i) => {
+    const match = links.find((l) => l.text === part);
+    if (!match) return part;
+    return (
+      <Link
+        key={i}
+        href={match.href}
+        className="font-semibold text-brand underline decoration-brand/40 underline-offset-2 hover:decoration-brand"
+      >
+        {part}
+      </Link>
+    );
+  });
+}
 
 // Blog blok renderer — h2/p/ul/ol/table (featured snippet dostu).
 export default function PostBlocks({ blocks }: { blocks: Block[] }) {
@@ -18,7 +41,7 @@ export default function PostBlocks({ blocks }: { blocks: Block[] }) {
           case "p":
             return (
               <p key={i} className="leading-relaxed text-slate-600">
-                {b.text}
+                {renderWithLinks(b.text, b.links)}
               </p>
             );
           case "ul":

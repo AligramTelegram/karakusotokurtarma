@@ -62,14 +62,35 @@ export function localBusinessSchema() {
   };
 }
 
-export function faqSchema() {
+export function faqPageSchema(items: { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: FAQS.map((f) => ({
+    mainEntity: items.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
+
+export function faqSchema() {
+  return faqPageSchema([...FAQS]);
+}
+
+export function itemListSchema(
+  items: { name: string; url: string }[],
+  listName: string
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: listName,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: item.url,
     })),
   };
 }

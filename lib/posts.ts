@@ -1,8 +1,10 @@
 // Blog / rehber içerikleri — blok tabanlı (featured snippet için h2/liste/tablo destekli).
 // Rakiplerin zayıf olduğu "fiyat" ve "nasıl" aramalarını hedefler.
 
+export type InlineLink = { text: string; href: string };
+
 export type Block =
-  | { type: "p"; text: string }
+  | { type: "p"; text: string; links?: InlineLink[] }
   | { type: "h2"; text: string }
   | { type: "ul"; items: string[] }
   | { type: "ol"; items: string[] }
@@ -37,6 +39,7 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "Çorum'da yolda kaldığınızda en çok merak edilen sorulardan biri: “Çekici kaç para?” Oto kurtarma ücretleri sabit bir tarife değildir; mesafe, araç tipi, hizmet türü ve aracın durumu fiyatı belirler. Bu rehberde 2026 güncel fiyat aralıklarını ve net teklifi nasıl alacağınızı açıklıyoruz.",
+        links: [{ text: "Çekici", href: "/hizmetler/oto-kurtarici" }],
       },
       { type: "h2", text: "Çorum çekici fiyatları neye göre değişir?" },
       {
@@ -79,6 +82,7 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "Karakuş Yol Yardım olarak Çorum ve tüm ilçelerinde şeffaf fiyat politikası uygularız. Aramanız yeterli: 0541 840 38 95.",
+        links: [{ text: "tüm ilçelerinde", href: "/bolgeler" }],
       },
     ],
     faq: [
@@ -107,6 +111,7 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "Trafik kazası stresli bir andır; ancak doğru adımları bilmek hem güvenliğinizi hem de haklarınızı korur. İşte kaza sonrası yapmanız gerekenler.",
+        links: [{ text: "haklarınızı", href: "/blog/sigortali-cekici-hakki" }],
       },
       { type: "h2", text: "Kaza sonrası ilk 5 adım" },
       {
@@ -132,6 +137,9 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "Çorum ve ilçelerinde kaza kurtarma için 7/24 buradayız. Güvenli ve hızlı müdahale için hemen arayın: 0541 840 38 95.",
+        links: [
+          { text: "kaza kurtarma", href: "/hizmetler/kaza-agir-tonaj-kurtarma" },
+        ],
       },
     ],
     faq: [
@@ -182,6 +190,9 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "Aceleniz varsa ya da anlaşmalı ekip uzaktaysa, Karakuş Yol Yardım olarak Çorum'da hızlı çözüm sunuyoruz. Faturalı hizmet için arayın: 0541 840 38 95.",
+        links: [
+          { text: "Çorum'da hızlı çözüm", href: "/hizmetler/sehir-ici-oto-kurtarma" },
+        ],
       },
     ],
     faq: [
@@ -230,6 +241,7 @@ export const POSTS: Post[] = [
       {
         type: "p",
         text: "Çorum'da aküniz bittiyse yerinize gelir, dakikalar içinde çalıştırırız. Akü takviye ve değişim için: 0541 840 38 95.",
+        links: [{ text: "Akü takviye ve değişim", href: "/hizmetler/aku-takviye" }],
       },
     ],
     faq: [

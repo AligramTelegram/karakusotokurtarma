@@ -6,7 +6,7 @@ import { SITE } from "@/lib/site";
 import { DISTRICTS } from "@/lib/districts";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda",
+  title: "Hakkımızda | Çorum Oto Kurtarma Ekibimiz",
   description:
     "Karakuş Yol Yardım, Çorum ve tüm ilçelerinde yılların deneyimiyle 7/24 oto kurtarma, çekici ve yol yardım hizmeti sunar. Güvenilir, hızlı ve profesyonel ekip.",
   alternates: { canonical: "/hakkimizda" },
