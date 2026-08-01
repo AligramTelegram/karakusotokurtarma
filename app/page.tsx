@@ -192,7 +192,18 @@ export default function HomePage() {
             title="Çorumluların Güvendiği Ekip"
             desc="Zor anlarında bize güvenen müşterilerimizin deneyimleri."
           />
-          <Reveal className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 flex items-center justify-center gap-2">
+            <div className="flex gap-0.5 text-brand">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <StarIcon key={i} className="h-5 w-5" />
+              ))}
+            </div>
+            <span className="text-sm font-semibold text-ink">5.0</span>
+            <span className="text-sm text-slate-500">
+              · Google'da 41 yorum
+            </span>
+          </div>
+          <Reveal className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {REVIEWS.map((r) => (
               <figure key={r.name} className="card">
                 <div className="flex gap-0.5 text-brand">

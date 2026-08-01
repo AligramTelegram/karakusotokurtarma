@@ -58,6 +58,14 @@ export function localBusinessSchema() {
     },
     areaServed: SERVICE_AREAS,
     hasMap: SITE.google.businessUrl || undefined,
+    // Google İşletme Profili'nden alınan gerçek puan/yorum sayısı.
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "41",
+      bestRating: "5",
+      worstRating: "1",
+    },
     availableLanguage: "Turkish",
     sameAs: [
       SITE.social.instagram,
