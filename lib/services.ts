@@ -37,11 +37,16 @@ export const SERVICES: Service[] = [
       "Modern kayar kasa (sıfır zeminli) çekicilerimizle otomobilinizi, ticari aracınızı veya motosikletinizi zemine sürtmeden, çizik ve hasar riski olmadan yükleriz. Düşük araçlar, spor araçlar ve elektrikli araçlar için özel ekipmanımız mevcuttur.",
       "Şehir içi çekim ücretlerimiz sabittir; telefonda net fiyat verir, olay yerinde sürpriz ek ücret çıkarmayız. Amacımız zor anınızda güvenilir ve hızlı çözüm sunmaktır.",
       "Ekibimiz Çorum trafiğini ve kestirme güzergâhları iyi bildiği için yoğun saatlerde bile gecikme yaşamadan olay yerine ulaşırız. İster iş yerinizin önünde, ister sitenizin otoparkında kalın, adresinizi paylaşmanız yeterlidir.",
+      "Aracınızı kurtardıktan sonra isterseniz size en yakın oto tamirci veya oto servise, isterseniz güvendiğiniz özel servise güvenle taşırız — nereye götüreceğinizi bilmiyorsanız bölgedeki yetkili servisler konusunda da yönlendirme yaparız.",
     ],
     faq: [
       {
         q: "Çorum şehir içinde çekici ne kadar sürede gelir?",
         a: "Şehir merkezinde ortalama 15-25 dakika içinde olay yerinde oluyoruz. Trafik ve konumunuza göre bu süre değişebilir, aradığınızda size net bir tahmini süre veririz.",
+      },
+      {
+        q: "Aracımı istediğim oto tamirciye/servise götürebilir misiniz?",
+        a: "Evet. Aracınızı size en yakın veya tercih ettiğiniz oto tamirci ya da yetkili servise güvenle taşırız. Adresi belirtmeniz yeterli.",
       },
       {
         q: "Şehir içi çekici ücreti sabit mi?",
@@ -177,11 +182,16 @@ export const SERVICES: Service[] = [
       "Modern kayar kasa kurtarıcılarımız düşük araçları, spor ve elektrikli araçları zemine sürtmeden taşır. Kaza yapmış ya da tekerleği dönmeyen araçlar için de özel ekipmanımız mevcuttur.",
       "En yakın kurtarıcıyı yönlendirdiğimiz için bekleme süreniz minimumdur. Telefonda net fiyat verir, sürpriz ücret çıkarmayız.",
       "Çorum merkez, sanayi bölgesi ve otoyol güzergâhlarında konumlu ekiplerimiz sayesinde, gün içinde nerede olursanız olun size en yakın kurtarıcıyı hızla yönlendiririz.",
+      "Aracınızı kurtardıktan sonra süreç bitmiyor: talebinize göre en yakın oto tamirciye, markanızın yetkili oto servisine ya da doğrudan evinize/iş yerinize taşıyoruz. Hangi oto servisi tercih edeceğinizi bilmiyorsanız bölgedeki güvenilir seçenekler konusunda da yardımcı oluruz.",
     ],
     faq: [
       {
         q: "Oto kurtarıcı ile çekici arasında fark var mı?",
         a: "Aynı hizmeti kastediyoruz; oto kurtarıcı, aracınızı arıza veya kaza sonrası güvenle taşıyan çekici aracı ve ekibimizi ifade eder.",
+      },
+      {
+        q: "Kurtardığınız aracı oto tamirciye veya servise götürüyor musunuz?",
+        a: "Evet. Aracınızı kurtardıktan sonra tercih ettiğiniz oto tamirciye, yetkili oto servise veya istediğiniz adrese güvenle taşırız.",
       },
       {
         q: "Aracım çalışmıyor, yine de yükleyebilir misiniz?",

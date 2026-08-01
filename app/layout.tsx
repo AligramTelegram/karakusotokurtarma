@@ -41,6 +41,8 @@ export const metadata: Metadata = {
     "çorum yediemin",
     "yediemin çekici çorum",
     "trafikten men araç çorum",
+    "çorum oto tamirciye çekme",
+    "arızalı araç oto servise çekme",
   ],
   authors: [{ name: SITE.name }],
   creator: SITE.name,
