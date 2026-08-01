@@ -1,6 +1,13 @@
 // JSON-LD yapısal veri üreticileri — rakiplerin en büyük eksiği bu.
 import { SITE } from "./site";
 import { FAQS } from "./faq";
+import { DISTRICTS } from "./districts";
+
+// Merkez + tüm ilçeler — Google Maps/yerel arama için hizmet bölgesi listesi.
+const SERVICE_AREAS = [
+  { "@type": "City", name: "Çorum Merkez" },
+  ...DISTRICTS.map((d) => ({ "@type": "City", name: `${d.name}, Çorum` })),
+];
 
 export function localBusinessSchema() {
   return {
@@ -49,10 +56,8 @@ export function localBusinessSchema() {
       opens: "00:00",
       closes: "23:59",
     },
-    areaServed: {
-      "@type": "AdministrativeArea",
-      name: "Çorum",
-    },
+    areaServed: SERVICE_AREAS,
+    hasMap: SITE.google.businessUrl || undefined,
     availableLanguage: "Turkish",
     sameAs: [
       SITE.social.instagram,
@@ -95,7 +100,12 @@ export function itemListSchema(
   };
 }
 
-export function serviceSchema(name: string, description: string, url: string) {
+export function serviceSchema(
+  name: string,
+  description: string,
+  url: string,
+  areaName?: string
+) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -104,7 +114,9 @@ export function serviceSchema(name: string, description: string, url: string) {
     description,
     url,
     provider: { "@id": `${SITE.url}/#business` },
-    areaServed: { "@type": "AdministrativeArea", name: "Çorum" },
+    areaServed: areaName
+      ? { "@type": "City", name: `${areaName}, Çorum` }
+      : SERVICE_AREAS,
     availableChannel: {
       "@type": "ServiceChannel",
       servicePhone: SITE.phoneRaw,

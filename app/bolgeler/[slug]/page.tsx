@@ -70,7 +70,8 @@ export default function DistrictDetail({
         data={serviceSchema(
           `${d.name} Oto Kurtarma`,
           `${d.name} Çorum'da 7/24 oto kurtarma ve çekici hizmeti.`,
-          url
+          url,
+          d.name
         )}
       />
       <JsonLd
