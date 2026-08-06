@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import PostBlocks from "@/components/PostBlocks";
 import FaqAccordion from "@/components/FaqAccordion";
 import { CtaBand } from "@/components/ui";
-import { PhoneIcon, ClockIcon, ArrowRightIcon } from "@/components/Icons";
+import { PhoneIcon, ClockIcon, ArrowRightIcon, ShieldIcon } from "@/components/Icons";
 import { POSTS, getPost } from "@/lib/posts";
 import { SITE, telUrl } from "@/lib/site";
 import { articleSchema, breadcrumbSchema, faqPageSchema } from "@/lib/schema";
@@ -85,7 +85,11 @@ export default function PostDetail({ params }: { params: { slug: string } }) {
         <div className="container-x">
           <div className="grid gap-12 lg:grid-cols-3">
             <article className="lg:col-span-2">
-              <div className="mb-6 flex items-center gap-4 text-xs text-slate-400">
+              <div className="mb-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-400">
+                <span className="flex items-center gap-1.5 font-medium text-slate-600">
+                  <ShieldIcon className="h-3.5 w-3.5 text-brand" />
+                  Karakuş Yol Yardım Ekibi
+                </span>
                 <span>Yayın: {fmt(post.date)}</span>
                 <span>Güncelleme: {fmt(post.updated)}</span>
                 <span className="flex items-center gap-1">

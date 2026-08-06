@@ -84,6 +84,14 @@ export const POSTS: Post[] = [
         text: "Karakuş Yol Yardım olarak Çorum ve tüm ilçelerinde şeffaf fiyat politikası uygularız. Aramanız yeterli: 0541 840 38 95.",
         links: [{ text: "tüm ilçelerinde", href: "/bolgeler" }],
       },
+      {
+        type: "p",
+        text: "Aracınız kaza sonrası hareket edemiyorsa güvenliğinizi öncelikli tutup kaza sonrası ne yapmalı rehberimize göz atabilirsiniz. Akü kaynaklı bir arızayla karşılaştıysanız akü bitince ne yapmalı yazımız işinize yarayabilir.",
+        links: [
+          { text: "kaza sonrası ne yapmalı", href: "/blog/kaza-sonrasi-ne-yapmali" },
+          { text: "akü bitince ne yapmalı", href: "/blog/aku-bitince-ne-yapmali" },
+        ],
+      },
     ],
     faq: [
       {
@@ -93,6 +101,10 @@ export const POSTS: Post[] = [
       {
         q: "Çekici ücreti mesafeye göre mi hesaplanır?",
         a: "Evet. Şehir içi çekimlerde genellikle sabit bir taban ücret, şehirlerarası taşımada ise km başına ücret uygulanır. Ağır tonaj kurtarma operasyona göre fiyatlanır.",
+      },
+      {
+        q: "Şehirlerarası çekici ücreti nasıl hesaplanır?",
+        a: "Genellikle kilometre başına ücretlendirilir; araç tipi ve güzergâh da fiyatı etkiler. Net teklif almak için konumunuzu belirterek bizi arayabilirsiniz.",
       },
     ],
   },
@@ -136,6 +148,16 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
+        text: "Kaza sonrası çekici ücretinin ne kadar tutacağını merak ediyorsanız güncel çorum çekici fiyatları rehberimize göz atabilirsiniz.",
+        links: [
+          {
+            text: "çorum çekici fiyatları rehberimize",
+            href: "/blog/corum-cekici-fiyatlari-2026",
+          },
+        ],
+      },
+      {
+        type: "p",
         text: "Çorum ve ilçelerinde kaza kurtarma için 7/24 buradayız. Güvenli ve hızlı müdahale için hemen arayın: 0541 840 38 95.",
         links: [
           { text: "kaza kurtarma", href: "/hizmetler/kaza-agir-tonaj-kurtarma" },
@@ -150,6 +172,10 @@ export const POSTS: Post[] = [
       {
         q: "Kaza kurtarma ücretini sigorta karşılar mı?",
         a: "Poliçenizin kapsamına göre değişir; birçok kasko ve bazı trafik sigortası paketleri çekici/kurtarma desteği içerir. Sigorta şirketinizle teyit etmeniz önerilir.",
+      },
+      {
+        q: "Kaza sonrası aracımı istediğim servise götürebilir miyim?",
+        a: "Evet. Kurtardığımız aracınızı sizin tercih ettiğiniz oto tamirciye veya yetkili servise güvenle taşırız.",
       },
     ],
   },
@@ -189,6 +215,13 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
+        text: "Trafik kazası yaşadıysanız kaza sonrası ne yapmalı rehberimizdeki adımları takip ederek hem güvenliğinizi hem haklarınızı koruyabilirsiniz.",
+        links: [
+          { text: "kaza sonrası ne yapmalı", href: "/blog/kaza-sonrasi-ne-yapmali" },
+        ],
+      },
+      {
+        type: "p",
         text: "Aceleniz varsa ya da anlaşmalı ekip uzaktaysa, Karakuş Yol Yardım olarak Çorum'da hızlı çözüm sunuyoruz. Faturalı hizmet için arayın: 0541 840 38 95.",
         links: [
           { text: "Çorum'da hızlı çözüm", href: "/hizmetler/sehir-ici-oto-kurtarma" },
@@ -199,6 +232,14 @@ export const POSTS: Post[] = [
       {
         q: "Kaskomda çekici hakkı olduğunu nasıl anlarım?",
         a: "Poliçe belgenizde 'yol yardım / çekici' maddesine bakın veya sigorta şirketinizi arayın. Çoğu kasko yıllık belirli sayıda ücretsiz çekici hakkı içerir.",
+      },
+      {
+        q: "Anlaşmalı çekici ile anlaşmasız çekici arasındaki fark nedir?",
+        a: "Anlaşmalı çekici sigorta şirketinin yönlendirdiği firmadır ve genellikle ücretsizdir. Anlaşmasız çekici çağırırsanız ödediğiniz ücreti fatura ile sigortanıza ibraz edebilirsiniz (poliçe şartına göre).",
+      },
+      {
+        q: "Yol yardım hakkımı yılda kaç kez kullanabilirim?",
+        a: "Poliçenize göre değişir; çoğu kasko yılda birkaç kez ücretsiz çekici/yol yardım hakkı tanır. Kesin sayı için sigorta şirketinizi aramanızı öneririz.",
       },
     ],
   },
@@ -240,6 +281,16 @@ export const POSTS: Post[] = [
       },
       {
         type: "p",
+        text: "Akü takviyesi ücretlerini merak ediyorsanız çorum çekici fiyatları rehberimizde detayları bulabilirsiniz.",
+        links: [
+          {
+            text: "çorum çekici fiyatları rehberimizde",
+            href: "/blog/corum-cekici-fiyatlari-2026",
+          },
+        ],
+      },
+      {
+        type: "p",
         text: "Çorum'da aküniz bittiyse yerinize gelir, dakikalar içinde çalıştırırız. Akü takviye ve değişim için: 0541 840 38 95.",
         links: [{ text: "Akü takviye ve değişim", href: "/hizmetler/aku-takviye" }],
       },
@@ -248,6 +299,155 @@ export const POSTS: Post[] = [
       {
         q: "Akü takviyesi araca zarar verir mi?",
         a: "Doğru yapıldığında zarar vermez. Ancak yanlış kutup bağlantısı elektronik aksama zarar verebilir; bu yüzden profesyonel takviye önerilir.",
+      },
+      {
+        q: "Akü kaç yılda bir değişmeli?",
+        a: "Ortalama akü ömrü 3-5 yıldır; iklim koşulları, kullanım sıklığı ve araç bakımına göre bu süre değişebilir.",
+      },
+      {
+        q: "Kısa mesafe kullanım aküyü şarj eder mi?",
+        a: "Hayır, kısa turlar aküyü tam şarj etmez. Akü zaten zayıfsa kısa kullanım yeterli olmaz; yerinde takviye veya değişim en hızlı çözümdür.",
+      },
+    ],
+  },
+  {
+    slug: "arac-nasil-cekilir",
+    title: "Araç Nasıl Çekilir? Doğru ve Güvenli Çekme Rehberi",
+    metaTitle: "Araç Nasıl Çekilir? | Güvenli Çekme Rehberi",
+    metaDescription:
+      "Arızalı veya kaza yapmış araç nasıl çekilir? Doğru çekme yöntemleri, halatla çekmenin riskleri ve profesyonel çekicinin farkı. Çorum'da 7/24 destek.",
+    excerpt:
+      "Aracınızı kendiniz mi çekeceksiniz yoksa profesyonel çekici mi çağırmalısınız? Doğru ve güvenli araç çekme yöntemlerini anlatıyoruz.",
+    date: "2026-07-25",
+    updated: "2026-08-01",
+    readMin: 5,
+    blocks: [
+      {
+        type: "p",
+        text: "Arızalanan ya da kaza yapan bir aracın nasıl çekileceğini bilmek, hem sürücü güvenliği hem de araç sağlığı açısından önemlidir. Yanlış çekme yöntemi aracınıza ciddi zarar verebilir. Bu rehberde doğru araç çekme yöntemlerini ve nelere dikkat etmeniz gerektiğini anlatıyoruz.",
+      },
+      { type: "h2", text: "Aracınızı kendiniz çekmeye çalışmalı mısınız?" },
+      {
+        type: "p",
+        text: "Halat veya iple çekme, kısa mesafelerde bazen tercih edilse de risklidir: fren sistemi, direksiyon hakimiyeti ve şanzıman üzerinde ciddi zarar oluşabilir. Özellikle otomatik vitesli araçlarda yanlış çekme şanzımanı tamamen bozabilir.",
+      },
+      { type: "h2", text: "Profesyonel çekici ile araç çekmenin avantajları" },
+      {
+        type: "ul",
+        items: [
+          "Kayar kasa (sıfır zeminli) çekici, aracı hiç sürüklemeden yükler.",
+          "Otomatik ve dört çeker araçlar için özel yöntemler uygulanır.",
+          "Sigorta ve hasar süreçlerinde kayıt altına alınmış, güvenilir hizmet sağlar.",
+          "Trafik güvenliği önlemleriyle çalışılır, ikinci bir kaza riski azalır.",
+        ],
+      },
+      { type: "h2", text: "Hangi durumlarda çekici çağırmalısınız?" },
+      {
+        type: "ol",
+        items: [
+          "Araç hiç çalışmıyorsa veya marş atmıyorsa.",
+          "Kaza sonrası hareket edemiyorsa.",
+          "Lastik veya jant hasarlı ve stepne yoksa.",
+          "Şanzıman veya fren arızası şüphesi varsa.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Kaza sonrası araç çekme sürecini adım adım öğrenmek isterseniz kaza sonrası ne yapmalı rehberimize göz atabilirsiniz.",
+        links: [
+          { text: "kaza sonrası ne yapmalı", href: "/blog/kaza-sonrasi-ne-yapmali" },
+        ],
+      },
+      {
+        type: "p",
+        text: "Çorum'da aracınızı nasıl çekeceğinizi bilmiyorsanız bizi arayın; kayar kasa çekicilerimizle aracınızı zarar vermeden güvenle taşırız: 0541 840 38 95.",
+        links: [
+          { text: "kayar kasa çekicilerimizle", href: "/hizmetler/oto-kurtarici" },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Otomatik vitesli araç nasıl çekilir?",
+        a: "Otomatik vitesli araçlar dört tekeri de yerden kesilecek şekilde, kayar kasa (platform) çekici ile taşınmalıdır; aksi halde şanzımana ciddi zarar verebilir.",
+      },
+      {
+        q: "Aracımı halatla çekmek güvenli mi?",
+        a: "Kısa ve düşük hızlı mesafelerde mümkün olsa da risklidir; fren ve direksiyon kontrolü zorlaşır. Güvenli olan yöntem profesyonel çekicidir.",
+      },
+      {
+        q: "Çekici gelene kadar aracımı nasıl korurum?",
+        a: "Aracı mümkünse yol kenarına çekin, dörtlü flaşörleri açın ve arkasına reflektör koyun; trafik güvenliğinizi sağlayın.",
+      },
+    ],
+  },
+  {
+    slug: "yol-yardim-nedir",
+    title: "Yol Yardım Nedir? Kapsamı ve Ne Zaman Gerekir",
+    metaTitle: "Yol Yardım Nedir? | Kapsamı ve Hizmetleri",
+    metaDescription:
+      "Yol yardım nedir, neleri kapsar? Akü, lastik, yakıt ve çekici desteği dahil yol yardım hizmetlerini ve ne zaman gerektiğini anlatıyoruz. Çorum'da 7/24.",
+    excerpt:
+      "Yol yardım tam olarak nedir, hangi durumları kapsar? Aracınız yolda kaldığında hangi hizmeti çağırmanız gerektiğini öğrenin.",
+    date: "2026-07-29",
+    updated: "2026-08-05",
+    readMin: 4,
+    blocks: [
+      {
+        type: "p",
+        text: "Yol yardım, aracınız yolda arıza yaptığında ya da beklenmedik bir sorunla karşılaştığınızda sizi tekrar yola çıkaran hizmetler bütünüdür. Her sorun çekici gerektirmez; çoğu zaman yerinde yapılan küçük bir müdahale yeterlidir.",
+      },
+      { type: "h2", text: "Yol yardım hangi hizmetleri kapsar?" },
+      {
+        type: "ul",
+        items: [
+          "Akü takviye ve akü değişimi",
+          "Lastik değişimi ve stepne montajı",
+          "Yakıt ikmali",
+          "Kapıda/kontakta kalan anahtar için yönlendirme",
+          "Küçük arızalarda yerinde müdahale",
+        ],
+      },
+      { type: "h2", text: "Yol yardım ile çekici arasındaki fark nedir?" },
+      {
+        type: "p",
+        text: "Yol yardım, aracınızı olduğu yerde tekrar çalışır hale getirmeyi hedefler. Sorun yerinde çözülemeyecek kadar büyükse (örneğin motor arızası veya ağır hasar), aynı ekip çekici hizmetine geçer ve aracınızı güvenle taşır.",
+        links: [{ text: "çekici hizmetine", href: "/hizmetler/oto-kurtarici" }],
+      },
+      { type: "h2", text: "Ne zaman yol yardım çağırmalısınız?" },
+      {
+        type: "ol",
+        items: [
+          "Aracınız çalışmıyor ama hareket ettirilebiliyorsa.",
+          "Akü, lastik veya yakıt kaynaklı bir sorun yaşıyorsanız.",
+          "Kısa sürede çözülebilecek küçük bir arıza varsa.",
+          "Emin değilseniz arayın; ekibimiz durumu değerlendirip doğru çözümü sunar.",
+        ],
+      },
+      {
+        type: "p",
+        text: "Çorum ve tüm ilçelerinde 7/24 yol yardım hizmeti veriyoruz. Aküniz bittiyse akü bitince ne yapmalı rehberimize, çekici fiyatlarını merak ediyorsanız güncel fiyat rehberimize göz atabilirsiniz.",
+        links: [
+          { text: "akü bitince ne yapmalı", href: "/blog/aku-bitince-ne-yapmali" },
+          {
+            text: "güncel fiyat rehberimize",
+            href: "/blog/corum-cekici-fiyatlari-2026",
+          },
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: "Yol yardım ücretli mi?",
+        a: "Hizmet türüne göre değişir; akü takviye ve lastik değişimi gibi işlemler uygun sabit ücretlidir, bazı kasko poliçeleri ise ücretsiz yol yardım hakkı sağlar.",
+      },
+      {
+        q: "Yol yardım ekibi ne kadar sürede gelir?",
+        a: "Çorum şehir merkezinde ortalama 15-25 dakika içinde olay yerinde oluyoruz; ilçelerde mesafeye göre süre değişebilir.",
+      },
+      {
+        q: "Yol yardım gece de çalışıyor mu?",
+        a: "Evet, 7 gün 24 saat kesintisiz hizmet veriyoruz; gece yarısı bile aynı hızda ulaşırız.",
       },
     ],
   },
