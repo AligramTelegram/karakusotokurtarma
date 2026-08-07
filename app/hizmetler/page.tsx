@@ -28,7 +28,7 @@ export default function HizmetlerPage() {
       />
       <PageHeader
         title="Hizmetlerimiz"
-        desc="Çorum ve tüm ilçelerinde ihtiyaç duyabileceğiniz tüm oto kurtarma ve yol yardım hizmetleri tek çatı altında."
+        desc="Çorum ve tüm ilçelerinde ihtiyaç duyabileceğiniz tüm oto kurtarma, şehirlerarası çekici ve yol yardım hizmetleri tek çatı altında."
         crumbs={[{ name: "Ana Sayfa", href: "/" }, { name: "Hizmetlerimiz" }]}
       />
       <section className="section">

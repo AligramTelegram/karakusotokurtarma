@@ -52,6 +52,7 @@ export const SITE = {
 export const NAV_LINKS = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Hizmetlerimiz", href: "/hizmetler" },
+  { label: "Yediemin Otoparkı", href: "/yediemin" },
   { label: "Hakkımızda", href: "/hakkimizda" },
   { label: "Bölgeler", href: "/bolgeler" },
   { label: "Blog", href: "/blog" },

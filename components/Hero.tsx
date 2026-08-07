@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="max-w-2xl">
           <p className="eyebrow mb-5 animate-fade-up [animation-delay:0ms]">
             <span className="h-px w-8 bg-brand" />
-            Çorum&apos;un 7/24 Yol Yardım Ekibi
+            Çorum&apos;un 7/24 Acil Çekici ve Oto Kurtarma Ekibi
           </p>
 
           <h1 className="animate-fade-up font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-white [animation-delay:100ms] sm:text-6xl sm:leading-[0.95] lg:text-7xl">

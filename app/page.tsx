@@ -92,10 +92,19 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <a href={telUrl()} className="btn-primary mt-8">
-                <PhoneIcon className="h-5 w-5" />
-                Bilgi Al · {SITE.phoneDisplay}
-              </a>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a href={telUrl()} className="btn-primary">
+                  <PhoneIcon className="h-5 w-5" />
+                  Bilgi Al · {SITE.phoneDisplay}
+                </a>
+                <Link
+                  href="/yediemin"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand hover:underline"
+                >
+                  Yediemin otoparkı detayları
+                  <ArrowRightIcon className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
 
             <div className="card">
